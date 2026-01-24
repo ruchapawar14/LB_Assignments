@@ -94,9 +94,10 @@ int main()
 // 
 //  Testcases handled successfully by the application
 // 
-//  Input : 45      Output  : Small
-//  Input : 50      Output  : Small
-//  Input : 75      Output  : Medium
-//  Input : 105     Output  : Large
-// 
+//  Input : 0       Output  : Zero
+//  Input : 5       Output  : Five
+//  Input : -7       Output  : Seven
+//  Input : 8       Output  : Eight
+//  Input : 9       Output  : Nine
+//  Input : 12       Output  : Invalid Number
 ///////////////////////////////////////////////////////////////////////////////// 
