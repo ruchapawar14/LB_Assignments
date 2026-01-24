@@ -8,8 +8,8 @@
 
 /////////////////////////////////////////////////////////////////////////////////
 // 
-//  Function Name   : Table
-//  Description     : It is used to accept number and display its table.
+//  Function Name   : TableReverse
+//  Description     : It is used to accept number and display its table in reverse.
 //  Input           : Int
 //  Output          : Void
 //  Author          : Rucha Haumant Pawar
@@ -17,7 +17,7 @@
 //  
 /////////////////////////////////////////////////////////////////////////////////
 
-void Table(int iNo)
+void TableReverse(int iNo)
 {
     int iCnt = 0;
 
@@ -26,13 +26,13 @@ void Table(int iNo)
         iNo = -iNo;
     }
 
-    for(iCnt = 1; iCnt <= 10; iCnt++)
+    for(iCnt = 10; iCnt >= 1; iCnt--)
     {
         printf("%d\t", iNo*iCnt);
     }
-} // End of Table
+} // End of TableReverse
 
-//  Time complexity :   O(1)
+//  Time complexity :   O(N)
 
 /////////////////////////////////////////////////////////////////////////////////
 // 
@@ -47,7 +47,7 @@ int main()
     printf("Enter number : ");
     scanf("%d", &iValue);
 
-    Table(iValue);
+    TableReverse(iValue);
 
     return 0;
 }
@@ -56,8 +56,8 @@ int main()
 // 
 //  Testcases handled successfully by the application
 // 
-//  Input : 2       Output  : 2       4       6       8       10      12      14      16      18      20
-//  Input : 5       Output  : 5       10      15      20      25      30      35      40      45      50
-//  Input : -5      Output  : 5       10      15      20      25      30      35      40      45      50
+//  Input : 2       Output  : 20      18      16      14      12      10      8       6       4       2
+//  Input : 5       Output  : 50      45      40      35      30      25      20      15      10      5
+//  Input : -5      Output  : 50      45      40      35      30      25      20      15      10      5
 // 
 ///////////////////////////////////////////////////////////////////////////////// 
