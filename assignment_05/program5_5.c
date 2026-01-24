@@ -8,30 +8,30 @@
 
 ///////////////////////////////////////////////////////////////////////////////////
 // 
-//  Function Name   : CheckNumberType
-//  Description     : It is used to checks whether entered number is positive, negative or zero
-//  Input           : Int
-//  Output          : Void
+//  Function Name   : FindLargest
+//  Description     : It is used to find the maximum of three numbers
+//  Input           : Int, Int, Int
+//  Output          : Int
 //  Author          : Rucha Hanumant Pawar
 //  Date            : 2/12/2025
 // 
 ///////////////////////////////////////////////////////////////////////////////////
 
-void CheckNumberType(int iNo)
+int FindLargest(int iNo1, int iNo2, int iNo3)
 {
-    if(iNo == 0)
+    if((iNo1 > iNo2) && (iNo1 > iNo3))
     {
-        printf("Zero\n");
+        return iNo1;
     }
-    else if(iNo > 0)
+    else if((iNo2 > iNo1) && (iNo2 > iNo3))
     {
-        printf("Positive number\n");
+        return iNo2;
     }
     else
     {
-        printf("Negative number\n");
+        return iNo3;
     }
-} // End of CheckNumberType
+} // End of FindLargest
 
 ///////////////////////////////////////////////////////////////////////////////////
 //
@@ -41,12 +41,24 @@ void CheckNumberType(int iNo)
 
 int main()
 {
-    int iValue = 0;
+    int iValue1 = 0;
+    int iValue2 = 0;
+    int iValue3 = 0;
+    int iRet = 0;
 
-    printf("Enter number : ");
-    scanf("%d", &iValue);
+    printf("Enter three numbers :\n");
+    scanf("%d%d%d", &iValue1, &iValue2, &iValue3);
 
-    CheckNumberType(iValue);
+    if((iValue1 == iValue2) && (iValue2 == iValue3))
+    {
+        printf("All are equal\n");
+    }
+    else
+    {
+        iRet = FindLargest(iValue1, iValue2, iValue3);
+
+        printf("Maximum is : %d", iRet);
+    }
 
     return 0;
 }
@@ -55,8 +67,8 @@ int main()
 // 
 //  Testcases handled successfully by the application
 // 
-//  Input : 55      Output : Positive number
-//  Input : -21     Output : Negative number
-//  Input : 0       Output : Zero
+//  Input   : 15    5   25          Output : Maximum is : 25
+//  Input   : -89   0   10          Output : Maximum is : 10
+//  Input   : 20    20  20         Output : All are equal
 // 
 ///////////////////////////////////////////////////////////////////////////////////
