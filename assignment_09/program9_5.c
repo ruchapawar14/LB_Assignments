@@ -8,8 +8,9 @@
 
 /////////////////////////////////////////////////////////////////////////////////
 // 
-//  Function Name   :   OddFactorial
-//  Description     :   It is used to find odd factorial of given number
+//  Function Name   :   FactorialDiff
+//  Description     :   It is used to find difference between even factorial 
+//                      and odd factorial of given number
 //  Input           :   Int
 //  Output          :   Int
 //  Author          :   Rucha Hanumant Pawar
@@ -17,10 +18,11 @@
 //  
 /////////////////////////////////////////////////////////////////////////////////
 
-int OddFactorial(int iNo)
+int FactorialDiff(int iNo)
 {
     int iCnt = 0;
-    int iFact = 1;
+    int iEvenFact = 1;
+    int iOddFact = 1;
 
     if(iNo < 0)
     {
@@ -29,14 +31,18 @@ int OddFactorial(int iNo)
 
     for(iCnt = iNo; iCnt >= 1; iCnt--)
     {
-        if(iCnt % 2 != 0)
+        if(iCnt % 2 == 0)
         {
-            iFact = iFact * iCnt;
+            iEvenFact = iEvenFact * iCnt;
+        }
+        else
+        {
+            iOddFact = iOddFact * iCnt;
         }
     }
 
-    return iFact;
-} // End of OddFactorial
+    return (iEvenFact - iOddFact);
+} // End of FactorialDiff
 
 //  Time complexity :   O(N)
 
@@ -65,8 +71,8 @@ int main()
 // 
 //  Testcases handled successfully by the application
 // 
-//  Input : 5       Output  : Factorial is : 15
-//  Input : -5      Output  : Factorial is : 15
-//  Input : 10      Output  : Factorial is : 945
+//  Input : 5       Output  : Factorial is : -7
+//  Input : -5      Output  : Factorial is : -7
+//  Input : 10      Output  : Factorial is : 2895
 // 
 ///////////////////////////////////////////////////////////////////////////////// 
