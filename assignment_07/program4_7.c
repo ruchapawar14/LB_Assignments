@@ -8,16 +8,16 @@
 
 /////////////////////////////////////////////////////////////////////////////////
 // 
-//  Function Name   : Display
-//  Description     : It is used to accept number from user and print its number line
+//  Function Name   : OddDisplay
+//  Description     : It is used to accept number from user and print all odd numbers till that number
 //  Input           : Int
 //  Output          : Void
 //  Author          : Rucha Hanumant Pawar
 //  Date            : 3/12/2025
-//  
+//
 /////////////////////////////////////////////////////////////////////////////////
 
-void Display(int iNo)
+void OddDisplay(int iNo)
 {
     int iCnt = 0;
 
@@ -26,16 +26,14 @@ void Display(int iNo)
         iNo = -iNo;
     }
 
-    for(iCnt = iNo; iCnt >= 1; iCnt--)
+    for(iCnt = 1; iCnt <= iNo; iCnt++)
     {
-        printf("%d\t", -iCnt);
+        if((iCnt % 2) != 0)
+        {
+            printf("%d\t", iCnt);
+        }
     }
-
-    for(iCnt = 0; iCnt <= iNo; iCnt++)
-    {
-        printf("%d\t", iCnt);
-    }
-} // End of Display
+} // End of OddDisplay
 
 //  Time complexity :   O(N)
 
@@ -52,7 +50,7 @@ int main()
     printf("Enter number : ");
     scanf("%d", &iValue);
 
-    Display(iValue);
+    OddDisplay(iValue);
 
     return 0;
 }
@@ -61,8 +59,8 @@ int main()
 // 
 //  Testcases handled successfully by the application
 // 
-//  Input : 4       Output  : -4      -3      -2      -1      0       1       2       3       4
-//  Input : -5      Output  : -5      -4      -3      -2      -1      0       1       2       3       4       5
-//  Input : 3       Output  : -3      -2      -1      0       1       2       3
+//  Input : 5       Output  : 1       2       3       4       5
+//  Input : -5      Output  : 1       2       3       4       5
+//  Input : 8       Output  : 1       2       3       4       5       6       7       8
 // 
 ///////////////////////////////////////////////////////////////////////////////// 
