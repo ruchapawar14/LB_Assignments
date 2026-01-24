@@ -59,8 +59,9 @@ int main()
 // 
 //  Testcases handled successfully by the application
 // 
-//  Input : 5       Output  : 1       2       3       4       5
-//  Input : -5      Output  : 1       2       3       4       5
-//  Input : 8       Output  : 1       2       3       4       5       6       7       8
+//  Input : 5       Output  : 1       3       5         
+//  Input : -5      Output  : 1       3       5              
+//  Input : 8       Output  : 1       3       5       7           
 // 
+
 ///////////////////////////////////////////////////////////////////////////////// 
