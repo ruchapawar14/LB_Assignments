@@ -8,31 +8,27 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
 // 
-//  Function Name   : MultFact
-//  Description     : It accepts number from user and displays its multiplication of factors
+//  Function Name   : FactRev
+//  Description     : It accepts number from user and displays its factors in decreasing order
 //  Input           : Int
-//  Output          : Int
-//  Author          : Rucha Hanumnant Pawar
+//  Output          : Void
+//  Author          : Rucha Hanumant Pawar
 //  Date            : 2/12/2025
 // 
 ////////////////////////////////////////////////////////////////////////////////////////////////
 
-int MultFact(int iNo)
+void FactRev(int iNo)
 {
     int iCnt = 0;
-    int iMult = 1;                              // To store multiplication of factors
 
-    for(iCnt = 1; iCnt <= iNo/2; iCnt++)
+    for(iCnt = iNo/2; iCnt >= 1; iCnt--)
     {
         if(((iNo % iCnt) == 0))
         {
-            iMult = iMult * iCnt;               // Business logic
+            printf("%d\t", iCnt);               
         }
     }
-    return iMult;
-} // End of MultFact
-
-//  Time Complexity : O(N/2)
+} // End of FactRev
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
 // 
@@ -43,14 +39,11 @@ int MultFact(int iNo)
 int main()
 {
     int iValue = 0;
-    int iRet = 0;                               // To store the result
 
     printf("Enter number : ");
     scanf("%d", &iValue);
 
-    iRet = MultFact(iValue);
-
-    printf("%d", iRet);
+    FactRev(iValue);
 
     return 0;
 }
@@ -59,8 +52,8 @@ int main()
 // 
 //  Testcases handled successfully by the application
 // 
-//  Input : 12      Output : 144
-//  Input : 13      Output : 1
-//  Input : 10      Output : 10
+//  Input : 12      Output : 6       4       3       2       1
+//  Input : 13      Output : 1       
+//  Input : 10      Output : 5       2       1
 // 
 ////////////////////////////////////////////////////////////////////////////////////////////////
