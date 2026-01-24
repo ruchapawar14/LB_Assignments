@@ -12,8 +12,8 @@
 //  Description     :   It is used to display '*' n times
 //  Input           :   Int
 //  Output          :   void      
-//  Author          :   Nidhi Girish Kadival
-//  Date            :   1/11/2025
+//  Author          :   Rucha Hanumant Pawar
+//  Date            :   2/12/2025
 // 
 ////////////////////////////////////////////////////////////////
 
@@ -60,4 +60,5 @@ int main()
 //  Input : 0       Output : 
 //  Input : -5      Output : * * * * *
 // 
+
 ////////////////////////////////////////////////////////////////
