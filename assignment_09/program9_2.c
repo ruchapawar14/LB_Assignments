@@ -8,36 +8,26 @@
 
 /////////////////////////////////////////////////////////////////////////////////
 // 
-//  Function Name   : PatternDisplay
-//  Description     : It is used to accept number from user and print that number of * & # on screen
+//  Function Name   : DollarToINR
+//  Description     : It is used to accept amount in US Dollar and return its corresponding value in Indian currency.
 //  Input           : Int
-//  Output          : Void
+//  Output          : Int
 //  Author          : Rucha Hanumant Pawar
 //  Date            : 3/12/2025
 //  
 /////////////////////////////////////////////////////////////////////////////////
 
-void PatternDisplay(int iNo)
+int DollarToINR(int iNo)
 {
-    int iCnt = 0;
-
     if(iNo < 0)
     {
         iNo = -iNo;
     }
 
-    for(iCnt = 1; iCnt <= iNo; iCnt++)
-    {
-        printf("*\t");
-    }
+    return (iNo*70);
+} // End of DollarToINR
 
-    for(iCnt = 1; iCnt <= iNo; iCnt++)
-    {
-        printf("#\t");
-    }
-} // End of PatternDisplay
-
-//  Time complexity :   O(N)
+//  Time complexity :   O(1)
 
 /////////////////////////////////////////////////////////////////////////////////
 // 
@@ -48,11 +38,14 @@ void PatternDisplay(int iNo)
 int main()
 {
     int iValue = 0;
+    int iRet = 0;
 
-    printf("Enter number : ");
+    printf("Enter amount in  US Dollar : ");
     scanf("%d", &iValue);
 
-    PatternDisplay(iValue);
+    iRet = DollarToINR(iValue);
+
+    printf("%d", iRet);
 
     return 0;
 }
@@ -61,9 +54,8 @@ int main()
 // 
 //  Testcases handled successfully by the application
 // 
-//  Input : 5       Output  : *       *       *       *       *       #       #       #       #       #
-//  Input : -5      Output  : *       *       *       *       *       #       #       #       #       #
-//  Input : 6       Output  : *       *       *       *       *       *       #       #       #       #       #       #
-//  Input : 2       Output  : *       *       #       #
+//  Input : 10          Output  : 700
+//  Input : 3           Output  : 210
+//  Input : 1200        Output  : 84000
 // 
 ///////////////////////////////////////////////////////////////////////////////// 
