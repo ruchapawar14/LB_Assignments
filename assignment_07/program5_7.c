@@ -8,16 +8,16 @@
 
 /////////////////////////////////////////////////////////////////////////////////
 // 
-//  Function Name   : OddDisplay
-//  Description     : It is used to accept number from user and print all odd numbers till that number
+//  Function Name   : MultipleDisplay
+//  Description     : It is used to accept N and print first 5 multiples of N
 //  Input           : Int
 //  Output          : Void
 //  Author          : Rucha Hanumant Pawar
 //  Date            : 3/12/2025
-//
+//  
 /////////////////////////////////////////////////////////////////////////////////
 
-void OddDisplay(int iNo)
+void MultipleDisplay(int iNo)
 {
     int iCnt = 0;
 
@@ -26,16 +26,13 @@ void OddDisplay(int iNo)
         iNo = -iNo;
     }
 
-    for(iCnt = 1; iCnt <= iNo; iCnt++)
+    for(iCnt = 1; iCnt <= 5; iCnt++)
     {
-        if((iCnt % 2) != 0)
-        {
-            printf("%d\t", iCnt);
-        }
+        printf("%d\t", iNo*iCnt);
     }
-} // End of OddDisplay
+} // End of MultipleDisplay
 
-//  Time complexity :   O(N)
+//  Time complexity :   O(1)
 
 /////////////////////////////////////////////////////////////////////////////////
 // 
@@ -50,7 +47,7 @@ int main()
     printf("Enter number : ");
     scanf("%d", &iValue);
 
-    OddDisplay(iValue);
+    MultipleDisplay(iValue);
 
     return 0;
 }
@@ -59,9 +56,9 @@ int main()
 // 
 //  Testcases handled successfully by the application
 // 
-//  Input : 5       Output  : 1       3       5         
-//  Input : -5      Output  : 1       3       5              
-//  Input : 8       Output  : 1       3       5       7           
+//  Input : 5       Output  : 5       10      15      20      25
+//  Input : 7       Output  : 7       14      21      28      3
+//  Input : -4      Output  : 4       8       12      16      2
+//  Input : 0       Output  : 0       0       0       0       0
 // 
-
 ///////////////////////////////////////////////////////////////////////////////// 
