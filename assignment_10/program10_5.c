@@ -1,0 +1,59 @@
+/////////////////////////////////////////////////////////////////////////////////
+// 
+//  Required header files
+// 
+/////////////////////////////////////////////////////////////////////////////////
+
+#include <stdio.h>
+
+/////////////////////////////////////////////////////////////////////////////////
+// 
+//  Function Name   :   SqFeetToSqMeter
+//  Description     :   It is used to accept area in square feet and convert it into square meter
+//  Input           :   Int
+//  Output          :   Double
+//  Author          :   Rucha Hanumant Pawar
+//  Date            :   3/12/2025
+//  
+/////////////////////////////////////////////////////////////////////////////////
+
+double SqFeetToSqMeter(int iSquareFeet)
+{
+    double dSquareMeter = 0.0;
+
+    dSquareMeter = (0.0929 * iSquareFeet);
+
+    return dSquareMeter;
+} // End of SqFeetToSqMeter
+
+//  Time complexity :   O(1)
+
+/////////////////////////////////////////////////////////////////////////////////
+// 
+//  Entry point function for the application
+// 
+/////////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    int iValue = 0;
+    double dRet = 0.0;
+
+    printf("Enter area in square feet : ");
+    scanf("%d", &iValue);
+
+    dRet = SqFeetToSqMeter(iValue);
+
+    printf("Area in square feet : %lf", dRet);
+
+    return 0;
+}
+
+/////////////////////////////////////////////////////////////////////////////////
+// 
+//  Testcases handled successfully by the application
+// 
+//  Input : 5           Output  : Area in square feet : 0.464500
+//  Input : 7           Output  : Area in square feet : 0.650300
+// 
+///////////////////////////////////////////////////////////////////////////////// 
