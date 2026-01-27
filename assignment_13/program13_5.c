@@ -1,0 +1,73 @@
+//////////////////////////////////////////////////////////////////////////////////////////////////
+// 
+//  Required header files
+// 
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+#include <stdio.h>
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+// 
+//  Function Name   : SumEvenNaturalNumbers
+//  Description     : It is used to print sum of numbers from 1 to N
+//  Input           : Int
+//  Output          : Int
+//  Author          : Rucha Hanumant Pawar
+//  Date            : 6/12/2025
+//  
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+int SumEvenNaturalNumbers(int iNo)
+{
+    int iCnt = 0;
+    int iSum = 0;
+
+    if (iNo < 0)
+    {
+        iNo = -iNo;
+    }
+
+    for(iCnt = 1; iCnt <= iNo; iCnt++)
+    {
+        if(iCnt % 2 == 0)
+        {
+            iSum = iSum + iCnt;
+        }
+    }
+
+    return iSum;
+} // End of SumEvenNaturalNumbers
+
+//  Time complexity :   O(N)
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+// 
+//  Entry point function for the application
+// 
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    int iValue = 0;
+    int iRet = 0;
+
+    printf("Enter number: ");
+    scanf("%d", &iValue);
+
+    iRet = SumEvenNaturalNumbers(iValue);
+    printf("Sum of even natural numbers from 1 to N is : %d", iRet);
+    
+    return 0;
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+// 
+//  Testcases handled successfully by the application
+// 
+//  Input   :   10      Output  :   30
+//  Input   :   6       Output  :   12
+//  Input   :   24      Output  :   156
+//  Input   :   100     Output  :   2550
+//  Input   :   50      Output  :   650
+// 
+////////////////////////////////////////////////////////////////////////////////////////////////// 
